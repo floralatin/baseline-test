@@ -115,7 +115,7 @@ runs:
             JINA_HUBBLE_REGISTRY: ${{ inputs.jina_hubble_registry }}
         with:
           repository: jina-ai/jina
-          token: ${{ secrets.GITHUB_TOKEN }}
+          token: ${{ secrets.ACCESS_TOKEN }}
           ref: refs/heads/master
           path: jina
 
