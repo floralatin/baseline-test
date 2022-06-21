@@ -55,7 +55,7 @@ runs:
             NODE_ENV: ${{ inputs.node_env }}
             JINA_HUBBLE_REGISTRY: ${{ inputs.jina_hubble_registry }}
         run: | 
-          mkdir -p /tmp/jink-uploaded /tmp/jina-hubble-temp
+          mkdir -p /tmp/jina-uploaded /tmp/jina-hubble-temp
           sudo chown -R $USER:$USER /tmp/jina-uploaded /tmp/jina-hubble-temp
           docker-compose up -d
         shell: bash
