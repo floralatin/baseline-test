@@ -38,15 +38,12 @@ runs:
             JINA_HUBBLE_REGISTRY: ${{ inputs.jina_hubble_registry }}
         with:
           repository: jina-ai/hubble
-          token: ${{ inputs.github-token }}
+          token: ${{ secrets.ACCESS_TOKEN }}
           ref: refs/heads/master
           path: hubble
           lfs: true
 
       - name: mk logs folder
-        env:
-            NODE_ENV: ${{ inputs.node_env }}
-            JINA_HUBBLE_REGISTRY: ${{ inputs.jina_hubble_registry }}
         run: mkdir logs
         shell: bash
       
@@ -114,7 +111,7 @@ runs:
             JINA_HUBBLE_REGISTRY: ${{ inputs.jina_hubble_registry }}
         with:
           repository: jina-ai/jina
-          token: ${{ inputs.github-token }}
+          token: ${{ secrets.ACCESS_TOKEN }}
           ref: refs/heads/master
           path: jina
 
